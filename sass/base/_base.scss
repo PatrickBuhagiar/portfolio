@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  /*
+  Automatically inherit in all elements whatever we set
+  in body.
+   */
+  box-sizing: inherit;
+
+}
+
+html {
+  box-sizing: border-box;
+  /*
+
+  This will act as a basis for all our REM calculations.
+
+  The root font size is usually 16px. So 10px is 62.5%,
+  and thus 1REM = 10px.
+
+  REM is not supported by IE < 9
+  */
+  font-size: 62.5%; // 1rem == 10px (10px / 16px - 62.5%)
+
+  @include respond(tab-land) { // width < 1200 ?
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) { // width < 900?
+    font-size: 50%; // 1 rem == 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem == 12px, 12/16 = 75%
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh;
+}

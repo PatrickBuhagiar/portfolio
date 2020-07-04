@@ -1,0 +1,85 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+
+@import "pages/homes";
+
+
+/*
+Notes:
+
+box model default:
+    - everything is a rectangle with:
+        - content
+        - width
+        - height
+        - padding
+        - border
+        - margin
+        - fill area (area that gets filled with background color)
+    - total width = r border + r padding + specified width + l padding + l border
+    - total height = t border + t padding + specified height + b padding + b border
+
+box model border-box
+    - the specified width and height will span across border and padding,
+      not just content area
+
+box types:
+    - block-level
+        - elements formatted visually as blocks
+        - 100% of parent's width
+        - vertically, one after another
+        - box-model applies
+        - e.g.
+            display: block, flex, list-item, table
+    - inline
+        - content is distributed in lines
+        - occupies only content's space
+        - no line-breaks
+        - no heights and widths
+        - padding and margins only horizontal
+        - e.g.
+            display: inline-block
+    - inline-block
+        - a mix of both
+        - occupies only content's space
+        - no line-breaks
+        - box-model applies as showed
+        - e.g.
+            display: inline
+
+positioning:
+    - normal flow
+        - default
+        - not floated
+        - not absolutely positioned
+        - elements laid out according to their source order
+        - e.g.
+            - position: relative
+    - floats
+        - Element is removed from the normal flow
+        - Text and inline elements will wrap around the floated element.
+        - The container will not adjust its height to the element.
+        - e.g.
+            - float: left, float: right
+    - Absolute positioning
+        - element is removed from the normal flow
+        - no impact on surrounding content or elements
+        - we use top/bottom/left/right to offset the element from its relatively positioned container.
+        - e.g.
+            - position: absolute, position: fixed
+
+stacking contexts
+    - z-index (there are other ways, lke transform and filter)
+*/
+

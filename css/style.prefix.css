@@ -1,0 +1,125 @@
+/**
+      0 - 600px:  Phone
+    600 - 900px:  Tablet Portrait
+   900 - 1200px:  Tablet landscape
+[1200 - 1800px]:  Our Normal Styles apply
+      1800px + :  Big Desktop
+
+  $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+
+    em is the best option for media queries, not rem.
+
+    ORDER to making stuff responsive:
+      Base + typography > general layout + grid > page layout > components
+ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /*
+  Automatically inherit in all elements whatever we set
+  in body.
+   */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+html {
+  /*
+
+  This will act as a basis for all our REM calculations.
+
+  The root font size is usually 16px. So 10px is 62.5%,
+  and thus 1REM = 10px.
+
+  REM is not supported by IE < 9
+  */
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem; }
+
+/*
+Notes:
+
+box model default:
+    - everything is a rectangle with:
+        - content
+        - width
+        - height
+        - padding
+        - border
+        - margin
+        - fill area (area that gets filled with background color)
+    - total width = r border + r padding + specified width + l padding + l border
+    - total height = t border + t padding + specified height + b padding + b border
+
+box model border-box
+    - the specified width and height will span across border and padding,
+      not just content area
+
+box types:
+    - block-level
+        - elements formatted visually as blocks
+        - 100% of parent's width
+        - vertically, one after another
+        - box-model applies
+        - e.g.
+            display: block, flex, list-item, table
+    - inline
+        - content is distributed in lines
+        - occupies only content's space
+        - no line-breaks
+        - no heights and widths
+        - padding and margins only horizontal
+        - e.g.
+            display: inline-block
+    - inline-block
+        - a mix of both
+        - occupies only content's space
+        - no line-breaks
+        - box-model applies as showed
+        - e.g.
+            display: inline
+
+positioning:
+    - normal flow
+        - default
+        - not floated
+        - not absolutely positioned
+        - elements laid out according to their source order
+        - e.g.
+            - position: relative
+    - floats
+        - Element is removed from the normal flow
+        - Text and inline elements will wrap around the floated element.
+        - The container will not adjust its height to the element.
+        - e.g.
+            - float: left, float: right
+    - Absolute positioning
+        - element is removed from the normal flow
+        - no impact on surrounding content or elements
+        - we use top/bottom/left/right to offset the element from its relatively positioned container.
+        - e.g.
+            - position: absolute, position: fixed
+
+stacking contexts
+    - z-index (there are other ways, lke transform and filter)
+*/
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNvbXAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztHQWlCRztBQUNIOzs7RUFHRSxVQUFVO0VBQ1YsV0FBVztFQUNYOzs7S0FHRztFQUNILDRCQUFvQjtVQUFwQixvQkFBb0IsRUFBRTs7QUFFeEI7RUFDRTs7Ozs7Ozs7SUFRRTtFQUNGLGlCQUFpQixFQUFFO0VBQ25CO0lBQ0U7TUFDRSxrQkFBa0IsRUFBRSxFQUFFO0VBQzFCO0lBQ0U7TUFDRSxlQUFlLEVBQUUsRUFBRTtFQUN2QjtJQUNFO01BQ0UsZUFBZSxFQUFFLEVBQUU7O0FBRXpCO0VBQ0UsK0JBQXVCO1VBQXZCLHVCQUF1QjtFQUN2QixjQUFjLEVBQUU7O0FBRWxCOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7RUFrRUUiLCJmaWxlIjoic3R5bGUucHJlZml4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gICAgICAwIC0gNjAwcHg6ICBQaG9uZVxyXG4gICAgNjAwIC0gOTAwcHg6ICBUYWJsZXQgUG9ydHJhaXRcclxuICAgOTAwIC0gMTIwMHB4OiAgVGFibGV0IGxhbmRzY2FwZVxyXG5bMTIwMCAtIDE4MDBweF06ICBPdXIgTm9ybWFsIFN0eWxlcyBhcHBseVxyXG4gICAgICAxODAwcHggKyA6ICBCaWcgRGVza3RvcFxyXG5cclxuICAkYnJlYWtwb2ludCBhcmd1bWVudCBjaG9pY2VzOlxyXG4gICAgLSBwaG9uZVxyXG4gICAgLSB0YWItcG9ydFxyXG4gICAgLSB0YWItbGFuZFxyXG4gICAgLSBiaWctZGVza3RvcFxyXG5cclxuICAgIGVtIGlzIHRoZSBiZXN0IG9wdGlvbiBmb3IgbWVkaWEgcXVlcmllcywgbm90IHJlbS5cclxuXHJcbiAgICBPUkRFUiB0byBtYWtpbmcgc3R1ZmYgcmVzcG9uc2l2ZTpcclxuICAgICAgQmFzZSArIHR5cG9ncmFwaHkgPiBnZW5lcmFsIGxheW91dCArIGdyaWQgPiBwYWdlIGxheW91dCA+IGNvbXBvbmVudHNcclxuICovXG4qLFxuKjo6YWZ0ZXIsXG4qOjpiZWZvcmUge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIC8qXHJcbiAgQXV0b21hdGljYWxseSBpbmhlcml0IGluIGFsbCBlbGVtZW50cyB3aGF0ZXZlciB3ZSBzZXRcclxuICBpbiBib2R5LlxyXG4gICAqL1xuICBib3gtc2l6aW5nOiBpbmhlcml0OyB9XG5cbmh0bWwge1xuICAvKlxyXG5cclxuICBUaGlzIHdpbGwgYWN0IGFzIGEgYmFzaXMgZm9yIGFsbCBvdXIgUkVNIGNhbGN1bGF0aW9ucy5cclxuXHJcbiAgVGhlIHJvb3QgZm9udCBzaXplIGlzIHVzdWFsbHkgMTZweC4gU28gMTBweCBpcyA2Mi41JSxcclxuICBhbmQgdGh1cyAxUkVNID0gMTBweC5cclxuXHJcbiAgUkVNIGlzIG5vdCBzdXBwb3J0ZWQgYnkgSUUgPCA5XHJcbiAgKi9cbiAgZm9udC1zaXplOiA2Mi41JTsgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc1ZW0pIHtcbiAgICBodG1sIHtcbiAgICAgIGZvbnQtc2l6ZTogNTYuMjUlOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1Ni4yNWVtKSB7XG4gICAgaHRtbCB7XG4gICAgICBmb250LXNpemU6IDUwJTsgfSB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTEyLjVlbSkge1xuICAgIGh0bWwge1xuICAgICAgZm9udC1zaXplOiA3NSU7IH0gfVxuXG5ib2R5IHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgcGFkZGluZzogM3JlbTsgfVxuXG4vKlxyXG5Ob3RlczpcclxuXHJcbmJveCBtb2RlbCBkZWZhdWx0OlxyXG4gICAgLSBldmVyeXRoaW5nIGlzIGEgcmVjdGFuZ2xlIHdpdGg6XHJcbiAgICAgICAgLSBjb250ZW50XHJcbiAgICAgICAgLSB3aWR0aFxyXG4gICAgICAgIC0gaGVpZ2h0XHJcbiAgICAgICAgLSBwYWRkaW5nXHJcbiAgICAgICAgLSBib3JkZXJcclxuICAgICAgICAtIG1hcmdpblxyXG4gICAgICAgIC0gZmlsbCBhcmVhIChhcmVhIHRoYXQgZ2V0cyBmaWxsZWQgd2l0aCBiYWNrZ3JvdW5kIGNvbG9yKVxyXG4gICAgLSB0b3RhbCB3aWR0aCA9IHIgYm9yZGVyICsgciBwYWRkaW5nICsgc3BlY2lmaWVkIHdpZHRoICsgbCBwYWRkaW5nICsgbCBib3JkZXJcclxuICAgIC0gdG90YWwgaGVpZ2h0ID0gdCBib3JkZXIgKyB0IHBhZGRpbmcgKyBzcGVjaWZpZWQgaGVpZ2h0ICsgYiBwYWRkaW5nICsgYiBib3JkZXJcclxuXHJcbmJveCBtb2RlbCBib3JkZXItYm94XHJcbiAgICAtIHRoZSBzcGVjaWZpZWQgd2lkdGggYW5kIGhlaWdodCB3aWxsIHNwYW4gYWNyb3NzIGJvcmRlciBhbmQgcGFkZGluZyxcclxuICAgICAgbm90IGp1c3QgY29udGVudCBhcmVhXHJcblxyXG5ib3ggdHlwZXM6XHJcbiAgICAtIGJsb2NrLWxldmVsXHJcbiAgICAgICAgLSBlbGVtZW50cyBmb3JtYXR0ZWQgdmlzdWFsbHkgYXMgYmxvY2tzXHJcbiAgICAgICAgLSAxMDAlIG9mIHBhcmVudCdzIHdpZHRoXHJcbiAgICAgICAgLSB2ZXJ0aWNhbGx5LCBvbmUgYWZ0ZXIgYW5vdGhlclxyXG4gICAgICAgIC0gYm94LW1vZGVsIGFwcGxpZXNcclxuICAgICAgICAtIGUuZy5cclxuICAgICAgICAgICAgZGlzcGxheTogYmxvY2ssIGZsZXgsIGxpc3QtaXRlbSwgdGFibGVcclxuICAgIC0gaW5saW5lXHJcbiAgICAgICAgLSBjb250ZW50IGlzIGRpc3RyaWJ1dGVkIGluIGxpbmVzXHJcbiAgICAgICAgLSBvY2N1cGllcyBvbmx5IGNvbnRlbnQncyBzcGFjZVxyXG4gICAgICAgIC0gbm8gbGluZS1icmVha3NcclxuICAgICAgICAtIG5vIGhlaWdodHMgYW5kIHdpZHRoc1xyXG4gICAgICAgIC0gcGFkZGluZyBhbmQgbWFyZ2lucyBvbmx5IGhvcml6b250YWxcclxuICAgICAgICAtIGUuZy5cclxuICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrXHJcbiAgICAtIGlubGluZS1ibG9ja1xyXG4gICAgICAgIC0gYSBtaXggb2YgYm90aFxyXG4gICAgICAgIC0gb2NjdXBpZXMgb25seSBjb250ZW50J3Mgc3BhY2VcclxuICAgICAgICAtIG5vIGxpbmUtYnJlYWtzXHJcbiAgICAgICAgLSBib3gtbW9kZWwgYXBwbGllcyBhcyBzaG93ZWRcclxuICAgICAgICAtIGUuZy5cclxuICAgICAgICAgICAgZGlzcGxheTogaW5saW5lXHJcblxyXG5wb3NpdGlvbmluZzpcclxuICAgIC0gbm9ybWFsIGZsb3dcclxuICAgICAgICAtIGRlZmF1bHRcclxuICAgICAgICAtIG5vdCBmbG9hdGVkXHJcbiAgICAgICAgLSBub3QgYWJzb2x1dGVseSBwb3NpdGlvbmVkXHJcbiAgICAgICAgLSBlbGVtZW50cyBsYWlkIG91dCBhY2NvcmRpbmcgdG8gdGhlaXIgc291cmNlIG9yZGVyXHJcbiAgICAgICAgLSBlLmcuXHJcbiAgICAgICAgICAgIC0gcG9zaXRpb246IHJlbGF0aXZlXHJcbiAgICAtIGZsb2F0c1xyXG4gICAgICAgIC0gRWxlbWVudCBpcyByZW1vdmVkIGZyb20gdGhlIG5vcm1hbCBmbG93XHJcbiAgICAgICAgLSBUZXh0IGFuZCBpbmxpbmUgZWxlbWVudHMgd2lsbCB3cmFwIGFyb3VuZCB0aGUgZmxvYXRlZCBlbGVtZW50LlxyXG4gICAgICAgIC0gVGhlIGNvbnRhaW5lciB3aWxsIG5vdCBhZGp1c3QgaXRzIGhlaWdodCB0byB0aGUgZWxlbWVudC5cclxuICAgICAgICAtIGUuZy5cclxuICAgICAgICAgICAgLSBmbG9hdDogbGVmdCwgZmxvYXQ6IHJpZ2h0XHJcbiAgICAtIEFic29sdXRlIHBvc2l0aW9uaW5nXHJcbiAgICAgICAgLSBlbGVtZW50IGlzIHJlbW92ZWQgZnJvbSB0aGUgbm9ybWFsIGZsb3dcclxuICAgICAgICAtIG5vIGltcGFjdCBvbiBzdXJyb3VuZGluZyBjb250ZW50IG9yIGVsZW1lbnRzXHJcbiAgICAgICAgLSB3ZSB1c2UgdG9wL2JvdHRvbS9sZWZ0L3JpZ2h0IHRvIG9mZnNldCB0aGUgZWxlbWVudCBmcm9tIGl0cyByZWxhdGl2ZWx5IHBvc2l0aW9uZWQgY29udGFpbmVyLlxyXG4gICAgICAgIC0gZS5nLlxyXG4gICAgICAgICAgICAtIHBvc2l0aW9uOiBhYnNvbHV0ZSwgcG9zaXRpb246IGZpeGVkXHJcblxyXG5zdGFja2luZyBjb250ZXh0c1xyXG4gICAgLSB6LWluZGV4ICh0aGVyZSBhcmUgb3RoZXIgd2F5cywgbGtlIHRyYW5zZm9ybSBhbmQgZmlsdGVyKVxyXG4qL1xuIl19 */
