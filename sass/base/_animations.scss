@@ -1,0 +1,65 @@
+
+@keyframes moveInLeft {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+
+  0% { /* start */
+    opacity: 0;
+    transform: translateX(-10em);
+  }
+
+  100% { /* finish */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+
+  0% { /* start */
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100% { /* finish */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+@keyframes moveInBottom {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+
+  0% { /* start */
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% { /* finish */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInTop {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+
+  0% { /* start */
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  100% { /* finish */
+    opacity: 1;
+    transform: translate(0);
+  }
+}

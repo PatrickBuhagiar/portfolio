@@ -52,9 +52,64 @@ html {
 body {
   height: 100vh; }
 
+html, body {
+  overflow: hidden; }
+
 .container {
   display: grid;
   grid-template-rows: 80vh; }
+
+@keyframes moveInLeft {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+  0% {
+    /* start */
+    opacity: 0;
+    transform: translateX(-10em); }
+  100% {
+    /* finish */
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+  0% {
+    /* start */
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    /* finish */
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+  0% {
+    /* start */
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    /* finish */
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInTop {
+  /* Best practice is to always
+     animate the opacity and transform
+     properties for best performance */
+  0% {
+    /* start */
+    opacity: 0;
+    transform: translateY(-3rem); }
+  100% {
+    /* finish */
+    opacity: 1;
+    transform: translate(0); } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -97,8 +152,9 @@ body {
   background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../../img/header-large.jpg");
   background-size: cover;
   background-position: top;
-  position: relative;
   height: 75vh;
+  backface-visibility: hidden;
+  transition: all .4s;
   display: grid;
   grid-row-gap: 1.5rem;
   grid-template-rows: 1fr minmax(16rem, max-content) 1fr;
@@ -110,7 +166,11 @@ body {
   .header__text {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1; }
+  .header__greeting {
+    animation: moveInLeft 1.5s cubic-bezier(0.65, 0.05, 0.36, 1); }
   .header__intro {
+    animation: moveInRight 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 1.3s;
+    animation-fill-mode: backwards;
     display: flex;
     flex-wrap: wrap; }
 

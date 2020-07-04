@@ -5,8 +5,9 @@
   url("../../img/header-large.jpg");
   background-size: cover;
   background-position: top;
-  position: relative;
   height: 75vh;
+  backface-visibility: hidden;
+  transition: all .4s;
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
@@ -25,10 +26,13 @@
   }
 
   &__greeting {
-
+    animation: moveInLeft 1.5s cubic-bezier(.65,.05,.36,1);
   }
 
   &__intro {
+    animation: moveInRight 1.5s cubic-bezier(.65,.05,.36,1) 1.3s;
+    animation-fill-mode: backwards; // makes text start hidden
+
     display: flex;
     flex-wrap: wrap;
   }
