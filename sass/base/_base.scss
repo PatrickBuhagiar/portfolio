@@ -39,16 +39,14 @@ html {
 }
 
 body {
-  height: 100vh;
-}
-
-html, body {
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 80vh;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [left-pad-start] minmax(6rem, 1fr)
+  [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+  minmax(6rem, 1fr) [right-pad-end];
 }
-
-

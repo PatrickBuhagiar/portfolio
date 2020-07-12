@@ -9,26 +9,41 @@ body {
 %heading {
   font-family: $font-primary;
   font-weight: 400;
-  color: $color-white;
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
 }
 
 .heading-1 {
   @extend %heading;
   font-size: 7rem;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .heading-2 {
   @extend %heading;
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .heading-3 {
   @extend %heading;
+  font-size: 2rem;
+}
+
+.heading-4 {
+  @extend %heading;
   font-size: 1.6rem;
 }
+
+.heading-5 {
+  @extend %heading;
+  font-size: 1.2rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+
 
 %paragraph {
   font-weight: 400;
