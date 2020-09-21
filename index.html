@@ -14,171 +14,142 @@
 <header class="header">
     <div class="header__text">
         <h1 class="heading-1 header__greeting">Hello!</h1>
-        <p class="p1 header__intro">I'm Patrick, a software engineer based in Leeds. My expertise spans both frontend
+        <p class="p1 header__intro">I'm Patrick, a software engineer based in Leeds. I specialise in both frontend
             and backend work.</p>
     </div>
 </header>
-<section class="work-experience">
-    <h2 class="heading-2 work-experience__header">
-        Work Experience & Education
+<section class="skills">
+    <h1 class="heading-1 skills__header">
+        SKILLS
+    </h1>
+    <h2 class="heading-2 skills__header">
+        Web
     </h2>
-    <!--  BJSS  -->
-    <div class="work-experience__card">
-        <div class="work-experience__heading">
-            <svg class="work-experience__icon">
-                <use xlink:href="../img/sprite.svg#icon-office"></use>
-            </svg>
-            <h3 class="heading-3 work-experience__name">BJSS Ltd.</h3>
-            <svg class="work-experience__location__icon">
-                <use xlink:href="../img/sprite.svg#icon-location2"></use>
-            </svg>
-            <h4 class="heading-4 work-experience__location">Leeds, UK</h4>
-            <h5 class="heading-5 work-experience__role">Software Engineer</h5>
-            <div class="work-experience__dates">September 2018 - Present</div>
-        </div>
-        <ul class="work-experience__description">
-            <li><strong>Project: NHS e-Referral System (e-RS)</strong></li>
-            <ul class="work-experience__description__sublist">
-                <li>The referral system used by NHS England, which sees around 70,000 daily referrals.</li>
-                <li>Maintained two applications:</li>
-                <ul class="work-experience__description__sublist">
-                    <li>A professional application used by clinicians and Service Providers.</li>
-                    <li>The <a target="_blank" href="https://refer.nhs.uk/login">Manage Your Referral</a> application,
-                        used by patients to choose their first hospital or clinic appointment with a specialist.
-                    </li>
-                </ul>
-                <li>Feature Contributions:</li>
-                <ul class="work-experience__description__sublist">
-                    <li>AngularJS 1.2 to Angular 10 migration.</li>
-                    <li>ETL reports.</li>
-                    <li>Introducing e-mail for patient letters.</li>
-                    <li>Introducing in-context help (Bootstrap Tours).</li>
-                    <li>Unified multi-category search using Elasticsearch.</li>
-                    <li>Performance improvements to worklist tables.</li>
-                    <li>Generate TypeScript interfaces from Java interfaces using an annotation processor.</li>
-                </ul>
-            </ul>
-        </ul>
-        <div class="work-experience__skills"></div>
+    <div class="skills__grid">
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-angularjs-100.png" alt="Angular" class="skills__logo">
+                <p class="skills__logo-description p1">Angular</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-react-100-2.png" alt="ReactJS" class="skills__logo">
+                <p class="skills__logo-description p1">React</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-javascript-100.png" alt="JavaScript" class="skills__logo">
+                <p class="skills__logo-description p1">JavaScript</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-typescript-100.png" alt="TypeScript" class="skills__logo">
+                <p class="skills__logo-description p1">TypeScript</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-html-5-100.png" alt="HTML5" class="skills__logo">
+                <p class="skills__logo-description p1">HTML</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-css3-100.png" alt="CSS" class="skills__logo">
+                <p class="skills__logo-description p1">CSS/SCSS</p>
+            </figcaption>
+        </figure>
     </div>
-    <!--  University of York  -->
-    <div class="work-experience__card">
-        <div class="work-experience__heading">
-            <svg class="work-experience__icon">
-                <use xlink:href="../img/sprite.svg#icon-school"></use>
-            </svg>
-            <h3 class="heading-3 work-experience__name">University of York</h3>
-            <svg class="work-experience__location__icon">
-                <use xlink:href="../img/sprite.svg#icon-location2"></use>
-            </svg>
-            <h4 class="heading-4 work-experience__location">York, UK</h4>
-            <h5 class="heading-5 work-experience__role">MSc Software Engineering</h5>
-            <div class="work-experience__dates">September 2017 - September 2018</div>
-        </div>
-        <ul class="work-experience__description">
-            <li><strong>Final Award Mark: 75%</strong></li>
-            <li><strong>Thesis: The Impact of Macroeconomic Parameters and Global Markets on Forecasting the FTSE
-                Index</strong></li>
-            <ul class="work-experience__description__sublist">
-                <li>The aim was to measure the impact of macroeconomic parameters and closing prices of global markets
-                    when predicting the direction of the FTSE index.
-                </li>
-                <li>Macroeconomic parameters involved inflation, balance of trade, GDP, Unemployment and interest
-                    rate.
-                </li>
-                <li>Used Feed-forward networks and a two-staged ensemble approach with Python and TensorFlow.</li>
-                <li>Refer to my <a
-                        href="https://patrickbuhagiar.com/2018/09/14/the-impact-of-macroeconomic-parameters-and-global-markets-on-forecasting-the-ftse-index-part-1/"
-                        target="_blank">article series</a> for more detailed information and results.
-                </li>
-                <li>Achieved a mark of 72%.</li>
-            </ul>
-        </ul>
-        <div class="work-experience__skills"></div>
+    <h2 class="heading-2 skills__header">Backend</h2>
+    <div class="skills__grid">
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-java-100.png" alt="Java" class="skills__logo">
+                <p class="skills__logo-description p1">Java</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-spring-logo-100.png" alt="Spring" class="skills__logo">
+                <p class="skills__logo-description p1">Spring</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-python-100-2.png" alt="Python" class="skills__logo">
+                <p class="skills__logo-description p1">Python</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-scala-100.png" alt="Scala" class="skills__logo">
+                <p class="skills__logo-description p1">Scala/Akka</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-postgresql-100.png" alt="Postgresql" class="skills__logo">
+                <p class="skills__logo-description p1">Postgresql</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-kotlin-100.png" alt="Kotlin" class="skills__logo">
+                <p class="skills__logo-description p1">Kotlin</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-c++-100.png" alt="C/C++" class="skills__logo">
+                <p class="skills__logo-description p1">C/C++</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-elasticsearch-100.png" alt="ElasticSearch" class="skills__logo">
+                <p class="skills__logo-description p1">ElasticSearch</p>
+            </figcaption>
+        </figure>
     </div>
-    <!--  Ixaris  -->
-    <div class="work-experience__card">
-        <div class="work-experience__heading">
-            <svg class="work-experience__icon">
-                <use xlink:href="../img/sprite.svg#icon-office"></use>
-            </svg>
-            <h3 class="heading-3 work-experience__name">Ixaris Ltd.</h3>
-            <svg class="work-experience__location__icon">
-                <use xlink:href="../img/sprite.svg#icon-location2"></use>
-            </svg>
-            <h4 class="heading-4 work-experience__location">San Gwann, Malta</h4>
-            <h5 class="heading-5 work-experience__role">Software Engineer</h5>
-            <div class="work-experience__dates">July 2015 - September 2017</div>
-        </div>
-        <ul class="work-experience__description">
-            <li><strong>EU Horizon 2020 Project: Open Payments Cloud (<a target="_blank"
-                                                                         href="https://www.weavr.io/open-payments-cloud-rebranded-as-weavr/">rebranded
-                to Weavr</a>)</strong></li>
-            <ul class="work-experience__description__sublist">
-                <li>A fully compliant, cloud-based platform that facilitates building solutions around virtual card
-                    payments through APIs.
-                </li>
-                <li>Implemented this project from scratch together with a team of 15-20 developers.</li>
-                <li>Built using a microservices architecture.</li>
-                <li>Web development using React and TypeScript.</li>
-                <li>Feature Contributions:</li>
-                <ul class="work-experience__description__sublist">
-                    <li>Implemented and maintained a custom language for creating payment application templates.</li>
-                    <li>Automatic push to production from a staging environment.</li>
-                    <li>Implemented wizards for creating and deploying payment applications.</li>
-                    <li>Toolset for developers to simplify creating more consistent user interfaces.</li>
-                    <li>Significant portion of documentation, including personas, processes and lifecycles.</li>
-                </ul>
-            </ul>
-            <li><strong>Team: Core Team</strong></li>
-            <ul class="work-experience__description__sublist">
-                <li>The team that supported other team projects.</li>
-                <li>Bug fixes to transaction engine, settlements, and improvements to some static web pages.</li>
-            </ul>
-        </ul>
-        <div class="work-experience__skills"></div>
-    </div>
-    <!--  University of Malta  -->
-    <div class="work-experience__card">
-        <div class="work-experience__heading">
-            <svg class="work-experience__icon">
-                <use xlink:href="../img/sprite.svg#icon-school"></use>
-            </svg>
-            <h3 class="heading-3 work-experience__name">University of Malta</h3>
-            <svg class="work-experience__location__icon">
-                <use xlink:href="../img/sprite.svg#icon-location2"></use>
-            </svg>
-            <h4 class="heading-4 work-experience__location">Msida, Malta</h4>
-            <h5 class="heading-5 work-experience__role">BSc Computing Science</h5>
-            <div class="work-experience__dates">October 2012 - November 2015</div>
-        </div>
-        <ul class="work-experience__description">
-            <li><strong>Final Award Mark: 63%</strong></li>
-            <li><strong>Thesis: A Photo-Sketch and Sketch-Photo Synthesis using Markov Random Fields</strong></li>
-            <ul class="work-experience__description__sublist">
-                <li>The aim was to prepare pencil sketches typically used by the police for automatic face recognition</li>
-                <li>Two approaches were presented:</li>
-                <ul class="work-experience__description__sublist">
-                    <li>Generating a realistic photo from the pencil sketch and using typical face photo recognition.</li>
-                    <li>Convert all photos in a database to sketches and train face recognition on sketches.</li>
-                </ul>
-                <li>Implemented in Matlab.</li>
-                <li>Training face recognition on synthesized photo sketches outperformed converting sketches to realistic photos.</li>
-                <li>The algorithm was implemented in such a way that conversion can be done both ways for any two modalities, e.g. paintings and line drawings.</li>
-                <li>The algorithm could also be used for super resolution (low quality to high quality conversion).</li>
-                <li>Achieved a mark of 70%.</li>
-            </ul>
-        </ul>
-        <div class="work-experience__skills"></div>
+    <h2 class="heading-2 skills__header">Cloud</h2>
+    <div class="skills__grid">
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-amazon-web-services-100.png" alt="AWS" class="skills__logo">
+                <p class="skills__logo-description p1">AWS</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-google-cloud-platform-100.png" alt="GCP" class="skills__logo">
+                <p class="skills__logo-description p1">GCP</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-docker-100-2.png" alt="Docker" class="skills__logo">
+                <p class="skills__logo-description p1">Docker</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-kubernetes-100.png" alt="Kubernetes" class="skills__logo">
+                <p class="skills__logo-description p1">Kubernetes</p>
+            </figcaption>
+        </figure>
+        <figure class="skills__skill">
+            <figcaption class="skills__skill">
+                <img src="img/PNG/icons8-heroku-96.png" alt="Heroku" class="skills__logo">
+                <p class="skills__logo-description p1">Heroku</p>
+            </figcaption>
+        </figure>
     </div>
 </section>
 <section class="projects">
-    Projects
-</section>
-<section class="skills">
-    Skills
 </section>
 <footer class="footer">
-    footer
 </footer>
 </body>

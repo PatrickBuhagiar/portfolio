@@ -39,15 +39,15 @@ html {
   REM is not supported by IE < 9
   */
   font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
 
 body {
   height: 100%;
@@ -148,6 +148,9 @@ strong {
 
 .p1 {
   font-size: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .p1 {
+      font-size: 2.5rem; } }
 
 .p2 {
   font-size: 2rem; }
@@ -162,24 +165,17 @@ header.header {
   grid-template-rows: 1fr minmax(16rem, max-content) 1fr;
   grid-template-columns: 1fr minmax(50%, min-content) 3fr; }
 
-section.work-experience {
-  grid-column: center-start / center-end;
-  grid-row: 2; }
-
 section.projects {
-  grid-column: center-start / center-end;
-  background-color: orangered; }
+  grid-column: center-start / center-end; }
 
 section.skills {
-  grid-column: center-start / center-end;
-  background-color: navy; }
+  grid-column: center-start / center-end; }
 
 footer.footer {
-  grid-column: 1 / -1;
-  background-color: greenyellow; }
+  grid-column: 1 / -1; }
 
 .header {
-  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../../img/header-large.jpg");
+  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../../img/header-small.jpg");
   background-size: cover;
   background-position: top;
   height: 75vh;
@@ -201,75 +197,30 @@ footer.footer {
     display: flex;
     flex-wrap: wrap; }
 
-.work-experience {
-  display: grid;
-  grid-gap: 3rem;
-  margin-bottom: 3rem; }
-  .work-experience__card {
+.skills {
+  transition: all .4s; }
+  .skills__header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    animation: moveInLeft 1.5s cubic-bezier(0.65, 0.05, 0.36, 1); }
+  .skills__grid {
     display: grid;
-    grid-template-columns: 22rem minmax(20rem, max-content);
-    grid-gap: 3rem; }
-  .work-experience__heading {
-    margin-right: 1rem;
-    display: grid;
-    grid-template-rows: repeat(4, minmax(3rem, min-content));
-    grid-template-columns: minmax(3rem, min-content) 1fr; }
-  .work-experience__icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    margin-right: 2rem;
-    margin-top: -5px;
-    fill: currentColor;
-    justify-self: right;
-    align-self: center;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2; }
-  .work-experience__name {
-    grid-column: 2 / -1;
-    grid-row: 1 / 2; }
-  .work-experience__location {
-    grid-column: 2 / -1;
-    grid-row: 2 / 3; }
-    .work-experience__location__icon {
-      width: 1.75rem;
-      height: 1.75rem;
-      margin-right: 2rem;
-      margin-top: -5px;
-      fill: currentColor;
-      justify-self: right;
-      align-self: center;
-      grid-column: 1 / 2;
-      grid-row: 2 / 3; }
-  .work-experience__role {
-    grid-column: 2 / -1;
-    grid-row: 3 / 4; }
-  .work-experience__dates {
-    font-weight: 500;
-    grid-column: 2 / -1;
-    grid-row: 4 / 5; }
-  .work-experience__description > * {
-    font-size: 1.5rem; }
-  .work-experience__description__sublist > * {
-    margin-left: 2rem; }
-
-li {
-  list-style: none; }
-  li::before {
-    content: "";
-    display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    margin-right: .7rem;
-    background-image: url(../../img/SVG/arrow_forward_ios.svg);
-    background-size: cover; }
-    @supports (-webkit-mask-image: none) or (mask-image: none) {
-      li::before {
-        background-color: #1D2731;
-        -webkit-mask-image: url(../../img/SVG/arrow_forward_ios.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../../img/SVG/arrow_forward_ios.svg);
-        mask-size: cover;
-        background-image: none; } }
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .skills__grid {
+        grid-gap: 3rem; } }
+  .skills__skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: moveInRight 1.5s cubic-bezier(0.65, 0.05, 0.36, 1); }
+  .skills__logo {
+    height: 5rem;
+    width: 5rem; }
+  .skills__logo-description {
+    color: #1D2731; }
 
 /*
 Notes:

@@ -6,22 +6,14 @@ header.header {
   grid-template-columns: 1fr minmax(50%, min-content) 3fr;
 }
 
-section.work-experience {
-  grid-column: center-start / center-end;
-  grid-row: 2;
-}
-
 section.projects {
   grid-column: center-start / center-end;
-  background-color: orangered;
 }
 
 section.skills {
   grid-column: center-start / center-end;
-  background-color: navy;
 }
 
 footer.footer {
   grid-column: 1 / -1;
-  background-color: greenyellow;
 }
