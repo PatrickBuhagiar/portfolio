@@ -1,10 +1,8 @@
 .skills {
-  transition: all .4s;
 
   &__header {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    animation: moveInLeft 1.5s cubic-bezier(.65,.05,.36,1);
   }
 
   &__grid {
@@ -22,7 +20,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: moveInRight 1.5s cubic-bezier(.65,.05,.36,1);
   }
 
   &__logo {

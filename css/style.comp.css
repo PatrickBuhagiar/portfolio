@@ -39,15 +39,15 @@ html {
   REM is not supported by IE < 9
   */
   font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
 
 body {
   height: 100%;
@@ -148,6 +148,9 @@ strong {
 
 .p1 {
   font-size: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .p1 {
+      font-size: 2.5rem; } }
 
 .p2 {
   font-size: 2rem; }
@@ -172,7 +175,7 @@ footer.footer {
   grid-column: 1 / -1; }
 
 .header {
-  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../../img/header-small.jpg");
+  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../img/header-small.jpg");
   background-size: cover;
   background-position: top;
   height: 75vh;
@@ -194,22 +197,30 @@ footer.footer {
     display: flex;
     flex-wrap: wrap; }
 
-.skills {
+.skills__header {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.skills__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 7rem; }
-  .skills__header {
-    grid-column: 1 / -1; }
-  .skills__grid {
-    grid-column: 1 / -1; }
-  .skills__skill {
-    display: flex;
-    justify-items: center; }
-  .skills__logo {
-    height: 5rem;
-    width: 5rem; }
-  .skills__logo-description {
-    color: #1D2731; }
+  @media only screen and (max-width: 37.5em) {
+    .skills__grid {
+      grid-gap: 3rem; } }
+
+.skills__skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.skills__logo {
+  height: 5rem;
+  width: 5rem; }
+
+.skills__logo-description {
+  color: #1D2731; }
 
 /*
 Notes:
