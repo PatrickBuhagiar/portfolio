@@ -7,7 +7,7 @@
   background-position: top;
   height: 75vh;
   backface-visibility: hidden;
-  transition: all .4s;
+  transition: transform .4s;
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
@@ -16,7 +16,7 @@
 
   &__text {
     grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
 
   }
 
