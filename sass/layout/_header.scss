@@ -22,11 +22,11 @@
 
   &__greeting {
     color: $color-white;
-    animation: moveInLeft 1.5s cubic-bezier(.65,.05,.36,1);
+    animation: moveInLeft 1.5s $animation-timing-function;
   }
 
   &__intro {
-    animation: moveInRight 1.5s cubic-bezier(.65,.05,.36,1) 1.3s;
+    animation: moveInRight 1.5s $animation-timing-function 1.3s;
     animation-fill-mode: backwards; // makes text start hidden
 
     display: flex;

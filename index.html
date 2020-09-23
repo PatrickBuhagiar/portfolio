@@ -8,10 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@200;300;400;500&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <title>Patrick Buhagiar</title>
 </head>
 <body class="container">
+<script>
+    AOS.init({once: true, offset: 300, duration: 1000});
+</script>
 <header class="header">
     <nav class="nav">
         <ul class="nav__list">
@@ -50,133 +55,143 @@
     </div>
 </header>
 <section class="skills">
-    <h1 class="heading-1 skills__header">
+    <h1 class="heading-1 skills__header" data-aos="fade-up">
         SKILLS
     </h1>
-    <h2 class="heading-2 skills__header">
-        Web
-    </h2>
-    <div class="skills__grid">
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-angularjs-100.png" alt="Angular" class="skills__logo">
-                <p class="skills__logo-description p1">Angular</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-react-100-2.png" alt="ReactJS" class="skills__logo">
-                <p class="skills__logo-description p1">React</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-javascript-100.png" alt="JavaScript" class="skills__logo">
-                <p class="skills__logo-description p1">JavaScript</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-typescript-100.png" alt="TypeScript" class="skills__logo">
-                <p class="skills__logo-description p1">TypeScript</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-html-5-100.png" alt="HTML5" class="skills__logo">
-                <p class="skills__logo-description p1">HTML</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-css3-100.png" alt="CSS" class="skills__logo">
-                <p class="skills__logo-description p1">CSS/SCSS</p>
-            </figcaption>
-        </figure>
+    <div class="skills__section" data-aos="fade-up">
+        <h2 class="heading-2 skills__header">
+            Web
+        </h2>
+        <div class="skills__grid">
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-angularjs-100.png" alt="Angular" class="skills__logo">
+                    <p class="skills__logo-description p1">Angular</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-react-100-2.png" alt="ReactJS" class="skills__logo">
+                    <p class="skills__logo-description p1">React</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-javascript-100.png" alt="JavaScript" class="skills__logo">
+                    <p class="skills__logo-description p1">JavaScript</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-typescript-100.png" alt="TypeScript" class="skills__logo">
+                    <p class="skills__logo-description p1">TypeScript</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-html-5-100.png" alt="HTML5" class="skills__logo">
+                    <p class="skills__logo-description p1">HTML</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-css3-100.png" alt="CSS" class="skills__logo">
+                    <p class="skills__logo-description p1">CSS/SCSS</p>
+                </figcaption>
+            </figure>
+        </div>
     </div>
-    <h2 class="heading-2 skills__header">Backend</h2>
-    <div class="skills__grid">
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-java-100.png" alt="Java" class="skills__logo">
-                <p class="skills__logo-description p1">Java</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-spring-logo-100.png" alt="Spring" class="skills__logo">
-                <p class="skills__logo-description p1">Spring</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-python-100-2.png" alt="Python" class="skills__logo">
-                <p class="skills__logo-description p1">Python</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-scala-100.png" alt="Scala" class="skills__logo">
-                <p class="skills__logo-description p1">Scala/Akka</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-postgresql-100.png" alt="Postgresql" class="skills__logo">
-                <p class="skills__logo-description p1">Postgresql</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-kotlin-100.png" alt="Kotlin" class="skills__logo">
-                <p class="skills__logo-description p1">Kotlin</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-c++-100.png" alt="C/C++" class="skills__logo">
-                <p class="skills__logo-description p1">C/C++</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-elasticsearch-100.png" alt="ElasticSearch" class="skills__logo">
-                <p class="skills__logo-description p1">ElasticSearch</p>
-            </figcaption>
-        </figure>
+    <div class="skills__section" data-aos="fade-up">
+        <h2 class="heading-2 skills__header">
+            Backend
+        </h2>
+        <div class="skills__grid">
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-java-100.png" alt="Java" class="skills__logo">
+                    <p class="skills__logo-description p1">Java</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-spring-logo-100.png" alt="Spring" class="skills__logo">
+                    <p class="skills__logo-description p1">Spring</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-python-100-2.png" alt="Python" class="skills__logo">
+                    <p class="skills__logo-description p1">Python</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-scala-100.png" alt="Scala" class="skills__logo">
+                    <p class="skills__logo-description p1">Scala/Akka</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-postgresql-100.png" alt="Postgresql" class="skills__logo">
+                    <p class="skills__logo-description p1">Postgresql</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-kotlin-100.png" alt="Kotlin" class="skills__logo">
+                    <p class="skills__logo-description p1">Kotlin</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-c++-100.png" alt="C/C++" class="skills__logo">
+                    <p class="skills__logo-description p1">C/C++</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-elasticsearch-100.png" alt="ElasticSearch" class="skills__logo">
+                    <p class="skills__logo-description p1">ElasticSearch</p>
+                </figcaption>
+            </figure>
+        </div>
     </div>
-    <h2 class="heading-2 skills__header">Cloud</h2>
-    <div class="skills__grid">
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-amazon-web-services-100.png" alt="AWS" class="skills__logo">
-                <p class="skills__logo-description p1">AWS</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-google-cloud-platform-100.png" alt="GCP" class="skills__logo">
-                <p class="skills__logo-description p1">GCP</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-docker-100-2.png" alt="Docker" class="skills__logo">
-                <p class="skills__logo-description p1">Docker</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-kubernetes-100.png" alt="Kubernetes" class="skills__logo">
-                <p class="skills__logo-description p1">Kubernetes</p>
-            </figcaption>
-        </figure>
-        <figure class="skills__skill">
-            <figcaption class="skills__skill">
-                <img src="img/PNG/icons8-heroku-96.png" alt="Heroku" class="skills__logo">
-                <p class="skills__logo-description p1">Heroku</p>
-            </figcaption>
-        </figure>
+    <div class="skills__section" data-aos="fade-up">
+        <h2 class="heading-2 skills__header">
+            Cloud
+        </h2>
+        <div class="skills__grid">
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-amazon-web-services-100.png" alt="AWS" class="skills__logo">
+                    <p class="skills__logo-description p1">AWS</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-google-cloud-platform-100.png" alt="GCP" class="skills__logo">
+                    <p class="skills__logo-description p1">GCP</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-docker-100-2.png" alt="Docker" class="skills__logo">
+                    <p class="skills__logo-description p1">Docker</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-kubernetes-100.png" alt="Kubernetes" class="skills__logo">
+                    <p class="skills__logo-description p1">Kubernetes</p>
+                </figcaption>
+            </figure>
+            <figure class="skills__skill">
+                <figcaption class="skills__skill">
+                    <img src="img/PNG/icons8-heroku-96.png" alt="Heroku" class="skills__logo">
+                    <p class="skills__logo-description p1">Heroku</p>
+                </figcaption>
+            </figure>
+        </div>
     </div>
 </section>
 <section class="projects">
