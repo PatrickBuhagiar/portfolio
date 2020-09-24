@@ -54,11 +54,6 @@ body {
   width: 100%;
   background-color: #f7f7f7; }
 
-.container {
-  display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [left-pad-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [right-pad-end]; }
-
 @keyframes moveInLeft {
   /* Best practice is to always
      animate the opacity and transform
@@ -120,7 +115,7 @@ body {
 .heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
-  text-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6);
   text-transform: uppercase; }
 
 .heading-1 {
@@ -158,6 +153,16 @@ strong {
 
 .p3 {
   font-size: 1.6rem; }
+
+::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [left-pad-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [right-pad-end]; }
 
 header.header {
   display: grid;
@@ -226,13 +231,12 @@ footer.footer {
     fill: currentColor; }
   .nav__link {
     font-size: 2rem;
-    color: white;
-    text-decoration: none;
     font-family: "Fjalla One", sans-serif;
     text-transform: uppercase;
     text-align: center;
     padding: 1.5rem;
     display: block;
+    filter: drop-shadow(0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6));
     transition: all .2s; }
   .nav__link:hover, .nav__link:active {
     background-color: rgba(255, 255, 255, 0.05);
@@ -265,71 +269,3 @@ footer.footer {
 
 .skills__logo-description {
   color: #1D2731; }
-
-/*
-Notes:
-
-box model default:
-    - everything is a rectangle with:
-        - content
-        - width
-        - height
-        - padding
-        - border
-        - margin
-        - fill area (area that gets filled with background color)
-    - total width = r border + r padding + specified width + l padding + l border
-    - total height = t border + t padding + specified height + b padding + b border
-
-box model border-box
-    - the specified width and height will span across border and padding,
-      not just content area
-
-box types:
-    - block-level
-        - elements formatted visually as blocks
-        - 100% of parent's width
-        - vertically, one after another
-        - box-model applies
-        - e.g.
-            display: block, flex, list-item, table
-    - inline
-        - content is distributed in lines
-        - occupies only content's space
-        - no line-breaks
-        - no heights and widths
-        - padding and margins only horizontal
-        - e.g.
-            display: inline-block
-    - inline-block
-        - a mix of both
-        - occupies only content's space
-        - no line-breaks
-        - box-model applies as showed
-        - e.g.
-            display: inline
-
-positioning:
-    - normal flow
-        - default
-        - not floated
-        - not absolutely positioned
-        - elements laid out according to their source order
-        - e.g.
-            - position: relative
-    - floats
-        - Element is removed from the normal flow
-        - Text and inline elements will wrap around the floated element.
-        - The container will not adjust its height to the element.
-        - e.g.
-            - float: left, float: right
-    - Absolute positioning
-        - element is removed from the normal flow
-        - no impact on surrounding content or elements
-        - we use top/bottom/left/right to offset the element from its relatively positioned container.
-        - e.g.
-            - position: absolute, position: fixed
-
-stacking contexts
-    - z-index (there are other ways, lke transform and filter)
-*/
