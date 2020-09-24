@@ -5,19 +5,18 @@
   url("../img/header-small.jpg");
   background-size: cover;
   background-position: top;
-  height: 75vh;
+  height: 80vh;
   backface-visibility: hidden;
   transition: transform .4s;
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
   }
 
   &__text {
     grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-
+    grid-row: 2 / span 1;
   }
 
   &__greeting {
@@ -31,5 +30,9 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
   }
 }
