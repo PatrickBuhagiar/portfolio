@@ -1,6 +1,8 @@
 .skills {
 
-  &__section {
+  padding-top: 2rem;
+
+  &__section:not(:last-child) {
     margin-bottom: 4rem;
   }
 
@@ -29,9 +31,5 @@
   &__logo {
     height: 5rem;
     width: 5rem;
-  }
-
-  &__logo-description {
-    color: $color-black;
   }
 }
