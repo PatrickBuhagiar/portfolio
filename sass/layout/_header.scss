@@ -20,10 +20,13 @@
   }
 
   &__greeting {
+    text-shadow: $shadow;
     animation: moveInLeft 1.5s $animation-timing-function;
   }
 
   &__intro {
+    text-shadow: $shadow;
+
     animation: moveInRight 1.5s $animation-timing-function 1.3s;
     animation-fill-mode: backwards; // makes text start hidden
 
