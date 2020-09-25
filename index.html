@@ -15,7 +15,7 @@
 </head>
 <body class="container">
 <script>
-    AOS.init({once: true, offset: 300, duration: 1000});
+    AOS.init({once: true, offset: 250, duration: 600});
 </script>
 <header class="header">
     <nav class="nav">
@@ -208,14 +208,15 @@
     </p>
     <div class="projects">
         <div class="project" data-aos="fade-up">
-            <img class="project__img" alt="smart_ads" src="img/PNG/projects/smart_ads.jpg">
+            <img class="project__img" alt="smart_ads" src="img/projects/smart_ads.jpg">
             <div class="project__details">
                 <div class="project__description">
                     <h2 class="heading-3 project__title">Really Smart Ads</h2>
                     <p class="p3">
                         My team's Hack Cambridge entry, which used Microsoft's Cognitive APIs to display adverts
                         based on the general age, emotion and sex of a group of people. For example, a durex advert
-                        would be shown if the majority of people seen by a camera were young happy men.
+                        would be shown if the majority of people seen by a camera were young happy men. My main responsibility was implementing a REST
+                        Controller that would decide which advert to display and collect statistics into a dashboard.
                     </p>
                 </div>
                 <div class="project__skills">
@@ -224,7 +225,7 @@
                             Java
                         </li>
                         <li class="project__skill">
-                            Spring
+                            SpringBoot
                         </li>
                         <li class="project__skill">
                             React
@@ -242,12 +243,12 @@
                 </div>
             </div>
             <div class="project__links">
-                <a href="https://www.youtube.com/watch?v=x4t5vPp3eeQ&feature=emb_title" target="_blank" class="nav__link">
+                <a href="https://www.youtube.com/watch?v=x4t5vPp3eeQ&feature=emb_title" target="_blank">
                     <svg class="project__link">
                         <use xlink:href="img/sprite.svg#icon-youtube"></use>
                     </svg>
                 </a>
-                <a href="https://devpost.com/software/really-smart-ads" target="_blank" class="nav__link">
+                <a href="https://devpost.com/software/really-smart-ads" target="_blank">
                     <svg class="project__link">
                         <use xlink:href="img/sprite.svg#icon-link"></use>
                     </svg>
@@ -255,10 +256,10 @@
             </div>
         </div>
         <div class="project" data-aos="fade-up">
-            <img class="project__img" alt="stock_market" src="img/PNG/projects/stock_market.png">
+            <img class="project__img" alt="stock_market" src="img/projects/stock_market.png">
             <div class="project__details">
                 <div class="project__description">
-                    <h2 class="heading-3 project__title">Thesis: Stock Market Prediction</h2>
+                    <h2 class="heading-3 project__title">Stock Market Prediction</h2>
                     <p class="p3">
                         For my masters thesis at the University of York, I sought to measure the
                         impact of macroeconomic data, such as unemployment rate and GDP, and other
@@ -288,19 +289,64 @@
                 </div>
             </div>
             <div class="project__links">
-                <a href="https://github.com/PatrickBuhagiar/masters-thesis" target="_blank" class="nav__link">
+                <a href="https://github.com/PatrickBuhagiar/masters-thesis" target="_blank">
                     <svg class="project__link">
                         <use xlink:href="img/sprite.svg#icon-github"></use>
                     </svg>
                 </a>
-                <a href="https://devpost.com/software/really-smart-ads" target="_blank" class="nav__link">
+                <a href="https://devpost.com/software/really-smart-ads" target="_blank">
                     <svg class="project__link">
                         <use xlink:href="img/sprite.svg#icon-link"></use>
                     </svg>
                 </a>
             </div>
         </div>
-
+        <div class="project" data-aos="fade-up">
+            <img class="project__img" alt="stock_market" src="img/projects/takeaway.jpg">
+            <div class="project__details">
+                <div class="project__description">
+                    <h2 class="heading-3 project__title">Take-Away Application</h2>
+                    <p class="p3">
+                        This was an assignment for a Service Oriented Architecture module, where we had to implement a
+                        food ordering and delivery system from scratch. I used a microservice approach, using
+                        Spring-Boot and Netflix Spring-Cloud tools (Data, Security, Rest, Eureka, Feign and
+                        Ribbon). As they weren't a requirement, it's on my todo-list to build a nice UI and containerise
+                        this application.
+                    </p>
+                </div>
+                <div class="project__skills">
+                    <ul class="project__skills-list">
+                        <li class="project__skill">
+                            Java
+                        </li>
+                        <li class="project__skill">
+                            SpringBoot
+                        </li>
+                        <li class="project__skill">
+                            SpringCloud
+                        </li>
+                        <li class="project__skill">
+                            SpringData
+                        </li>
+                        <li class="project__skill">
+                            SpringSecurity
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project__links">
+                <a href="https://github.com/PatrickBuhagiar/TimeToEat" target="_blank">
+                    <svg class="project__link">
+                        <use xlink:href="img/sprite.svg#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="https://devpost.com/software/really-smart-ads" target="_blank">
+                    <svg class="project__link">
+                        <use xlink:href="img/sprite.svg#icon-link"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 
 </section>

@@ -8,6 +8,7 @@
 
 .project {
   display: grid;
+  grid-template-rows: max-content;
   background-color: $color-secondary-light;
   box-shadow: $shadow;
 
@@ -24,12 +25,16 @@
     align-content: space-between;
   }
 
+  &__title {
+    margin-top: auto;
+  }
+
   &__description {
     text-align: center;
   }
 
   &__skills {
-    margin: auto;
+    margin-top: auto;
     &-list {
       display: flex;
       flex-wrap: wrap;
@@ -55,6 +60,23 @@
     height: 5rem;
     padding-top: 0;
     margin-top: auto;
+
+    > a {
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 0.5rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      display: block;
+      filter: drop-shadow($shadow);
+      transition: all .2s;
+
+      &:hover,
+      &:active {
+        background-color: rgba(#fff, .05);
+        transform: translateY(-3px);
+      }
+    }
   }
 
   &__link {
