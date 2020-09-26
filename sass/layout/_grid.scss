@@ -24,6 +24,10 @@ section.skills {
   grid-column: center-start / center-end;
 }
 
+section.cv {
+  grid-column: center-start / center-end;
+}
+
 footer.footer {
   grid-column: 1 / -1;
   grid-row: -1;

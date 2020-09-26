@@ -138,7 +138,6 @@ strong {
 
 .p1, .p2, .p3 {
   font-weight: 400;
-  color: #1D2731;
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 .p1 {
@@ -151,7 +150,7 @@ strong {
   font-size: 2rem; }
 
 .p3 {
-  font-size: 1.6rem; }
+  font-size: 1.4rem; }
 
 .text__light {
   color: #f7f7f7; }
@@ -191,12 +190,15 @@ section.portfolio {
 section.skills {
   grid-column: center-start / center-end; }
 
+section.cv {
+  grid-column: center-start / center-end; }
+
 footer.footer {
   grid-column: 1 / -1;
   grid-row: -1; }
 
 .header {
-  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(11, 60, 93, 0.7)), url("../img/header-small.jpg");
+  background-image: linear-gradient(to bottom left, #0b3c5d, rgba(1, 82, 73, 0.7)), url("../img/header-small.jpg");
   background-size: cover;
   background-position: top;
   height: 80vh;
@@ -221,6 +223,15 @@ footer.footer {
     @media only screen and (max-width: 56.25em) {
       .header__intro {
         font-size: 2.5rem; } }
+
+.footer {
+  background-color: #015249;
+  padding: 5rem 4rem;
+  color: #f7f7f7; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    display: inline-block;
+    transition: all .2s; }
 
 .nav {
   grid-column: 1 / -1;
@@ -346,3 +357,34 @@ footer.footer {
     width: 4rem;
     padding-left: 1rem;
     padding-right: 1rem; }
+
+.cv {
+  margin: 4rem;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+  .cv__button {
+    background-color: #219905;
+    color: #f7f7f7; }
+    .cv__button, .cv__button:link, .cv__button:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6); }
+    .cv__button:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.8); }
+      .cv__button:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+    .cv__button:active, .cv__button:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
+      box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.8); }

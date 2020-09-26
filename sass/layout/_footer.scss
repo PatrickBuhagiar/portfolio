@@ -1,0 +1,14 @@
+.footer {
+  background-color: $color-secondary-dark;
+  padding: 5rem 4rem;
+  color: $color-light-grey;
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-light-grey;
+      display: inline-block;
+      transition: all .2s;
+    }
+  }
+}
